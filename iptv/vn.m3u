@@ -1,0 +1,12 @@
+#EXTM3U
+#EXTINF:-1,VTV1 https://livecdn.fptplay.net/hda/vtv1hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV2 https://livecdn.fptplay.net/hda/vtv2_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV3 https://livecdn.fptplay.net/hda/vtv3hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV4 https://livecdn.fptplay.net/hda/vtv4_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV5 https://livecdn.fptplay.net/hda/vtv5hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV6 https://livecdn.fptplay.net/hda/vtv6hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV8 https://livecdn.fptplay.net/hda/vtv8hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV9 https://livecdn.fptplay.net/hda/vtv9_hls.smil/playlist.m3u8
+#EXTINF:-1,HTV1 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV1-SD-480p/playlist.m3u8
+#EXTINF:-1,HTV2 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8
+#EXTINF:-1,HTV3 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV3-SD-480p/playlist.m3u8
