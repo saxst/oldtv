@@ -16,13 +16,13 @@ import java.io.InputStreamReader
 import java.net.URL
 
 class MainActivity : Activity() {
-    private val playlists: ArrayList<String> = ArrayList()
+    private val playlists: ArrayList<Channel> = ArrayList()
     private lateinit var sharedPref: SharedPreferences
     private var index = 0
 
     private val mOnErrorListener: MediaPlayer.OnErrorListener =
         MediaPlayer.OnErrorListener { _, _, _ ->
-            playlists.removeAt(this.index)
+            playlists.removeAt(index)
             playChannel()
             video_view.start()
             true
@@ -44,12 +44,16 @@ class MainActivity : Activity() {
             val url = URL(getString(R.string.m3u_url)).openConnection()
             val inputStream: InputStream = url.getInputStream()
             val reader = BufferedReader(InputStreamReader(inputStream, "UTF-8"))
-
+            var channel = Channel()
             while (true) {
                 val line = reader.readLine() ?: break
+                if (line.contains("#EXTINF")) {
+                    channel = Channel()
+                    channel.name = line.split(",").toTypedArray()[1]
+                }
                 if (line.contains("http")) {
-                    val arr = line.split(" ").toTypedArray()
-                    playlists.add(arr[arr.size - 1])
+                    channel.url = line
+                    playlists.add(channel)
                 }
             }
 
@@ -61,7 +65,7 @@ class MainActivity : Activity() {
     }
 
     override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
-        Log.e(TAG, "onKeyUp $keyCode")
+        Log.d(TAG, "onKeyUp $keyCode")
         when (keyCode) {
             KeyEvent.KEYCODE_DPAD_UP -> {
                 if (index < playlists.size - 1) {
@@ -101,11 +105,7 @@ class MainActivity : Activity() {
             index = 0
         }
         saveIndex(index)
-        try {
-            video_view.setVideoURI(Uri.parse(playlists[this.index]))
-        } catch (ex: Exception) {
-            Log.e(TAG, ex.toString())
-        }
+        video_view.setVideoURI(Uri.parse(playlists[index].url))
         return true
     }
 
@@ -133,4 +133,9 @@ class MainActivity : Activity() {
     companion object {
         private const val TAG = "OLDTV_MainActivity"
     }
+}
+
+class Channel {
+    lateinit var name: String
+    lateinit var url: String
 }

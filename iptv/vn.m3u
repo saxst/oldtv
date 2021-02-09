@@ -1,59 +1,117 @@
 #EXTM3U
-#EXTINF:-1,VTV1 https://livecdn.fptplay.net/hda/vtv1hd_hls.smil/playlist.m3u8
-#EXTINF:-1,VTV2 https://livecdn.fptplay.net/hda/vtv2_hls.smil/playlist.m3u8
-#EXTINF:-1,VTV3 https://livecdn.fptplay.net/hda/vtv3hd_hls.smil/playlist.m3u8
-#EXTINF:-1,VTV4 https://livecdn.fptplay.net/hda/vtv4_hls.smil/playlist.m3u8
-#EXTINF:-1,VTV5 https://livecdn.fptplay.net/hda/vtv5hd_hls.smil/playlist.m3u8
-#EXTINF:-1,VTV6 https://livecdn.fptplay.net/hda/vtv6hd_hls.smil/playlist.m3u8
-#EXTINF:-1,VTV8 https://livecdn.fptplay.net/hda/vtv8hd_hls.smil/playlist.m3u8
-#EXTINF:-1,VTV9 https://livecdn.fptplay.net/hda/vtv9_hls.smil/playlist.m3u8
-#EXTINF:-1,HTV1 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV1-SD-480p/playlist.m3u8
-#EXTINF:-1,HTV2 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8
-#EXTINF:-1,HTV3 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV3-SD-480p/playlist.m3u8
-#EXTINF:-1,HTVC Ca nhạc https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-CANHAC-HD-1080p/playlist.m3u8
-#EXTINF:-1,HTVC Co op https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVCOOP-SD-ABR/playlist.m3u8
-#EXTINF:-1,HTVC Du Lịch https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-DULICH-HD-1080p/playlist.m3u8
-#EXTINF:-1,HTVC Phim https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-PHIM-HD-1080p/playlist.m3u8
-#EXTINF:-1,HTVC Phụ Nữ https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-PHUNU-HD-1080p/playlist.m3u8
-#EXTINF:-1,HTVC Shopping https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HOMESHOPPING-SD-ABR/playlist.m3u8
-#EXTINF:-1,HTVC Thể thao https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV-THETHAO-HD-1080p/playlist.m3u8
-#EXTINF:-1,HTVC Thuần Việt https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-THUANVIETHD-HD-1080p/playlist.m3u8
-#EXTINF:-1,VTC1 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/VTC1-SD-720p/playlist.m3u8
-#EXTINF:-1,VTC3 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/VTC3-HD-720p/playlist.m3u8
-#EXTINF:-1,VTC4 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/VTC4-SD-ABR/HTV-ABR/VTC4-SD-480p/playlist.m3u8
-#EXTINF:-1,Quốc Phòng VN https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/QPTV-SD-ABR/playlist.m3u8
-#EXTINF:-1,Quốc Hội HD https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/QUOCHOI-SD-ABR/playlist.m3u8
-#EXTINF:-1,VOV Giao Thông http://wvod.cdn.fptplay.net/ovod/_definst_/mp4:mp4/fplay/720p/XoneFM/xonefm13-3.mp4/playlist.m3u8
-#EXTINF:-1,ANTV https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/ANTV-SD-ABR/playlist.m3u8
-#EXTINF:-1,Bến Tre http://113.163.94.245/hls-live/livepkgr/_definst_/liveevent/thbt.m3u8
-#EXTINF:-1,Bình Dương 1 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/BINHDUONG1-SD-ABR/playlist.m3u8
-#EXTINF:-1,Cà Mau http://tv.ctvcamau.vn/live/tv/tv.m3u8
-#EXTINF:-1,Cần Thơ http://tv.canthotv.vn/live/tv/tv.m3u8
-#EXTINF:-1,Đà Nẵng 1 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/DANANG1-SD-ABR/playlist.m3u8
-#EXTINF:-1,Đồng Nai 1 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/DONGNAI1-SD-ABR/playlist.m3u8
-#EXTINF:-1,Đồng Tháp https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/DONGTHAP-SD-ABR/playlist.m3u8
-#EXTINF:-1,FBNC https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FBNC-HD-1080p/playlist.m3u8
-#EXTINF:-1,Hòa Bình http://hoabinhtvlive.746b3ddb.cdnviet.com/hoabinhtv/chunklist.m3u8
-#EXTINF:-1,Khánh Hòa http://210.245.20.94/hls/ktv1.m3u8
-#EXTINF:-1,Kiên Giang https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/KIENGIANG-SD-ABR/playlist.m3u8
-#EXTINF:-1,Nhân Dân https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/NHANDAN-SD-ABR/playlist.m3u8
-#EXTINF:-1,Phú yên http://113.161.4.48:8080/phuyen/tv.m3u8
-#EXTINF:-1,Quảng Nam http://113.161.6.157:8081/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8
-#EXTINF:-1,Tây Ninh https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/TAYNINH-SD-ABR/playlist.m3u8
-#EXTINF:-1,Tiền Giang http://thtg.vn:8001/thtg.m3u8
-#EXTINF:-1,TTXVN https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/TTXVN-SD-ABR/playlist.m3u8
-#EXTINF:-1,Yên Bái http://yenbaitv.org.vn//hls/livestream.m3u8
-#EXTINF:-1,AXN https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/AXN-HD-1080p/playlist.m3u8
-#EXTINF:-1,BBC World News https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/BBCNEWS-SD-720p/playlist.m3u8
-#EXTINF:-1,Bloomberg https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/BLOOMBERG-SD-720p/playlist.m3u8
-#EXTINF:-1,Cartoon SD https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/CARTOON-SD/playlist.m3u8
-#EXTINF:-1,CNN https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/CNN-SD-480p/playlist.m3u8
-#EXTINF:-1,Discovery Channel https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/DISCOVERY-HD-1080p/playlist.m3u8
-#EXTINF:-1,Fox Family Movie https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FOXFAMILY-HD-1080p/playlist.m3u8
-#EXTINF:-1,Fox Life https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FOXLIFE-SD-720p/playlist.m3u8
-#EXTINF:-1,Fox Sport 1 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FOXSPRORT-HD-1080p/playlist.m3u8
-#EXTINF:-1,Fox Sport 3 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FOXSPORTS3-HD-1080p/playlist.m3u8
-#EXTINF:-1,FoxMovie https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FOXMOVIES-HD-1080p/playlist.m3u8
-#EXTINF:-1,KBS World https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/KBS-HD-720p/playlist.m3u8
-#EXTINF:-1,NatGeoWild HD https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/NATGEOWILD-HD-1080p/playlist.m3u8
-#EXTINF:-1,WarnerTV https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/WANNERTV-SD-720p/playlist.m3u8
+#EXTINF:-1,VTV1
+https://livecdn.fptplay.net/hda/vtv1hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV2
+https://livecdn.fptplay.net/hda/vtv2_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV3
+https://livecdn.fptplay.net/hda/vtv3hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV4
+https://livecdn.fptplay.net/hda/vtv4_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV5
+https://livecdn.fptplay.net/hda/vtv5hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV6
+https://livecdn.fptplay.net/hda/vtv6hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV8
+https://livecdn.fptplay.net/hda/vtv8hd_hls.smil/playlist.m3u8
+#EXTINF:-1,VTV9
+https://livecdn.fptplay.net/hda/vtv9_hls.smil/playlist.m3u8
+#EXTINF:-1,HTV1
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV1-SD-480p/playlist.m3u8
+#EXTINF:-1,HTV2
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8
+#EXTINF:-1,HTV3
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV3-SD-480p/playlist.m3u8
+#EXTINF:-1,HTVC Ca nhạc
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-CANHAC-HD-1080p/playlist.m3u8
+#EXTINF:-1,HTVC Co op
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVCOOP-SD-ABR/playlist.m3u8
+#EXTINF:-1,HTVC Du Lịch
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-DULICH-HD-1080p/playlist.m3u8
+#EXTINF:-1,HTVC Phim
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-PHIM-HD-1080p/playlist.m3u8
+#EXTINF:-1,HTVC Phụ Nữ
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-PHUNU-HD-1080p/playlist.m3u8
+#EXTINF:-1,HTVC Shopping
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HOMESHOPPING-SD-ABR/playlist.m3u8
+#EXTINF:-1,HTVC Thể thao
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV-THETHAO-HD-1080p/playlist.m3u8
+#EXTINF:-1,HTVC Thuần Việt
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-THUANVIETHD-HD-1080p/playlist.m3u8
+#EXTINF:-1,VTC1
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/VTC1-SD-720p/playlist.m3u8
+#EXTINF:-1,VTC3
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/VTC3-HD-720p/playlist.m3u8
+#EXTINF:-1,VTC4
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/VTC4-SD-ABR/HTV-ABR/VTC4-SD-480p/playlist.m3u8
+#EXTINF:-1,Quốc Phòng VN
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/QPTV-SD-ABR/playlist.m3u8
+#EXTINF:-1,Quốc Hội HD
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/QUOCHOI-SD-ABR/playlist.m3u8
+#EXTINF:-1,VOV Giao Thông
+http://wvod.cdn.fptplay.net/ovod/_definst_/mp4:mp4/fplay/720p/XoneFM/xonefm13-3.mp4/playlist.m3u8
+#EXTINF:-1,ANTV
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/ANTV-SD-ABR/playlist.m3u8
+#EXTINF:-1,Bến Tre
+http://113.163.94.245/hls-live/livepkgr/_definst_/liveevent/thbt.m3u8
+#EXTINF:-1,Bình Dương 1
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/BINHDUONG1-SD-ABR/playlist.m3u8
+#EXTINF:-1,Cà Mau
+http://tv.ctvcamau.vn/live/tv/tv.m3u8
+#EXTINF:-1,Cần Thơ
+http://tv.canthotv.vn/live/tv/tv.m3u8
+#EXTINF:-1,Đà Nẵng 1
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/DANANG1-SD-ABR/playlist.m3u8
+#EXTINF:-1,Đồng Nai 1
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/DONGNAI1-SD-ABR/playlist.m3u8
+#EXTINF:-1,Đồng Tháp
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/DONGTHAP-SD-ABR/playlist.m3u8
+#EXTINF:-1,FBNC
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FBNC-HD-1080p/playlist.m3u8
+#EXTINF:-1,Hòa Bình
+http://hoabinhtvlive.746b3ddb.cdnviet.com/hoabinhtv/chunklist.m3u8
+#EXTINF:-1,Khánh Hòa
+http://210.245.20.94/hls/ktv1.m3u8
+#EXTINF:-1,Kiên Giang
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/KIENGIANG-SD-ABR/playlist.m3u8
+#EXTINF:-1,Nhân Dân
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/NHANDAN-SD-ABR/playlist.m3u8
+#EXTINF:-1,Phú yên
+http://113.161.4.48:8080/phuyen/tv.m3u8
+#EXTINF:-1,Quảng Nam
+http://113.161.6.157:8081/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8
+#EXTINF:-1,Tây Ninh
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/TAYNINH-SD-ABR/playlist.m3u8
+#EXTINF:-1,Tiền Giang
+http://thtg.vn:8001/thtg.m3u8
+#EXTINF:-1,TTXVN
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/TTXVN-SD-ABR/playlist.m3u8
+#EXTINF:-1,Yên Bái
+http://yenbaitv.org.vn//hls/livestream.m3u8
+#EXTINF:-1,AXN
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/AXN-HD-1080p/playlist.m3u8
+#EXTINF:-1,BBC World News
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/BBCNEWS-SD-720p/playlist.m3u8
+#EXTINF:-1,Bloomberg
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/BLOOMBERG-SD-720p/playlist.m3u8
+#EXTINF:-1,Cartoon SD
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/CARTOON-SD/playlist.m3u8
+#EXTINF:-1,CNN
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/CNN-SD-480p/playlist.m3u8
+#EXTINF:-1,Discovery Channel
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/DISCOVERY-HD-1080p/playlist.m3u8
+#EXTINF:-1,Fox Family Movie
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FOXFAMILY-HD-1080p/playlist.m3u8
+#EXTINF:-1,Fox Life
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FOXLIFE-SD-720p/playlist.m3u8
+#EXTINF:-1,Fox Sport 1
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FOXSPRORT-HD-1080p/playlist.m3u8
+#EXTINF:-1,Fox Sport 3
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FOXSPORTS3-HD-1080p/playlist.m3u8
+#EXTINF:-1,FoxMovie
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FOXMOVIES-HD-1080p/playlist.m3u8
+#EXTINF:-1,KBS World
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/KBS-HD-720p/playlist.m3u8
+#EXTINF:-1,NatGeoWild HD
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/NATGEOWILD-HD-1080p/playlist.m3u8
+#EXTINF:-1,WarnerTV
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/WANNERTV-SD-720p/playlist.m3u8
