@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -19,11 +20,21 @@ class MainActivity : Activity() {
     private lateinit var sharedPref: SharedPreferences
     private var index = 0
 
+    private val mOnErrorListener: MediaPlayer.OnErrorListener =
+        MediaPlayer.OnErrorListener { _, _, _ ->
+            playlists.removeAt(index)
+            playChannel(index)
+            video_view.start()
+            true
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         sharedPref = this.getPreferences(Context.MODE_PRIVATE)
         index = getIndex()
+        video_view.setOnErrorListener(mOnErrorListener)
         video_view.start()
         loadChannels()
     }
@@ -68,9 +79,12 @@ class MainActivity : Activity() {
                 }
                 return playChannel(index)
             }
-            KeyEvent.KEYCODE_DPAD_LEFT -> {}
-            KeyEvent.KEYCODE_DPAD_RIGHT -> {}
-            KeyEvent.KEYCODE_DPAD_CENTER -> {}
+            KeyEvent.KEYCODE_DPAD_LEFT -> {
+            }
+            KeyEvent.KEYCODE_DPAD_RIGHT -> {
+            }
+            KeyEvent.KEYCODE_DPAD_CENTER -> {
+            }
             KeyEvent.KEYCODE_MENU -> {
                 startActivityForResult(Intent(android.provider.Settings.ACTION_SETTINGS), 0);
             }
@@ -88,7 +102,11 @@ class MainActivity : Activity() {
         } else {
             saveIndex(index)
         }
-        video_view.setVideoURI(Uri.parse(playlists[index]))
+        try {
+            video_view.setVideoURI(Uri.parse(playlists[index]))
+        } catch (ex: Exception) {
+            Log.e(TAG, ex.toString())
+        }
         return true
     }
 
@@ -104,11 +122,13 @@ class MainActivity : Activity() {
     }
 
     override fun onPause() {
+        Log.e(TAG, "onPause")
         super.onPause()
         video_view.pause()
     }
 
     override fun onResume() {
+        Log.e(TAG, "onResume")
         super.onResume()
         video_view.start()
     }
