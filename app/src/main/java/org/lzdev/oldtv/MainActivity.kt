@@ -37,7 +37,8 @@ class MainActivity : Activity() {
             while (true) {
                 val line = reader.readLine() ?: break
                 if (line.contains("http")) {
-                    playlists.add(line.split(" ").toTypedArray()[1])
+                    val arr = line.split(" ").toTypedArray()
+                    playlists.add(arr[arr.size - 1])
                 }
             }
 
