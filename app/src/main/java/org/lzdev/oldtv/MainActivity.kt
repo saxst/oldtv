@@ -22,8 +22,8 @@ class MainActivity : Activity() {
 
     private val mOnErrorListener: MediaPlayer.OnErrorListener =
         MediaPlayer.OnErrorListener { _, _, _ ->
-            playlists.removeAt(index)
-            playChannel(index)
+            playlists.removeAt(this.index)
+            playChannel()
             video_view.start()
             true
         }
@@ -55,7 +55,7 @@ class MainActivity : Activity() {
 
             inputStream.close()
             runOnUiThread {
-                playChannel(index)
+                playChannel()
             }
         }.start()
     }
@@ -69,7 +69,7 @@ class MainActivity : Activity() {
                 } else {
                     index = 0
                 }
-                return playChannel(index)
+                return playChannel()
             }
             KeyEvent.KEYCODE_DPAD_DOWN -> {
                 if (index > 0) {
@@ -77,7 +77,7 @@ class MainActivity : Activity() {
                 } else {
                     index = playlists.size - 1
                 }
-                return playChannel(index)
+                return playChannel()
             }
             KeyEvent.KEYCODE_DPAD_LEFT -> {
             }
@@ -86,7 +86,7 @@ class MainActivity : Activity() {
             KeyEvent.KEYCODE_DPAD_CENTER -> {
             }
             KeyEvent.KEYCODE_MENU -> {
-                startActivityForResult(Intent(android.provider.Settings.ACTION_SETTINGS), 0);
+                startActivityForResult(Intent(android.provider.Settings.ACTION_SETTINGS), 0)
             }
             KeyEvent.KEYCODE_BACK -> {
                 loadChannels()
@@ -96,14 +96,13 @@ class MainActivity : Activity() {
         return super.onKeyUp(keyCode, event)
     }
 
-    private fun playChannel(index: Int): Boolean {
+    private fun playChannel(): Boolean {
         if (index >= playlists.size) {
-            saveIndex(0)
-        } else {
-            saveIndex(index)
+            index = 0
         }
+        saveIndex(index)
         try {
-            video_view.setVideoURI(Uri.parse(playlists[index]))
+            video_view.setVideoURI(Uri.parse(playlists[this.index]))
         } catch (ex: Exception) {
             Log.e(TAG, ex.toString())
         }
@@ -122,13 +121,11 @@ class MainActivity : Activity() {
     }
 
     override fun onPause() {
-        Log.e(TAG, "onPause")
         super.onPause()
         video_view.pause()
     }
 
     override fun onResume() {
-        Log.e(TAG, "onResume")
         super.onResume()
         video_view.start()
     }
