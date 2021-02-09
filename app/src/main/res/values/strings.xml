@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Old TV</string>
-    <string name="m3u_url">http://lzdev.org/media/iptv/vn.txt</string>
+    <string name="m3u_url">https://raw.githubusercontent.com/dieudv/oldtv/master/iptv/vn.m3u</string>
 </resources>
