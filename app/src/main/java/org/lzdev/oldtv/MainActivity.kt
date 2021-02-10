@@ -1,6 +1,7 @@
 package org.lzdev.oldtv
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -9,6 +10,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
+import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.BufferedReader
 import java.io.InputStream
@@ -88,6 +90,17 @@ class MainActivity : Activity() {
             KeyEvent.KEYCODE_DPAD_RIGHT -> {
             }
             KeyEvent.KEYCODE_DPAD_CENTER -> {
+                val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+                val adapter = ArrayAdapter<String>(this, android.R.layout.select_dialog_item)
+                playlists.forEach {
+                    adapter.add(it.name)
+                }
+                builder.setSingleChoiceItems(adapter, index) { dialog, which ->
+                    index = which
+                    playChannel()
+                    dialog.dismiss()
+                }
+                builder.show()
             }
             KeyEvent.KEYCODE_MENU -> {
                 startActivityForResult(Intent(android.provider.Settings.ACTION_SETTINGS), 0)
