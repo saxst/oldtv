@@ -2,11 +2,12 @@ package org.lzdev.oldtv
 
 import android.app.Activity
 import android.app.AlertDialog
-import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
+import android.content.*
 import android.media.MediaPlayer
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.net.Uri
+import android.net.wifi.WifiManager
 import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
@@ -17,16 +18,27 @@ import java.io.InputStream
 import java.io.InputStreamReader
 import java.net.URL
 
+
 class MainActivity : Activity() {
     private val playlists: ArrayList<Channel> = ArrayList()
     private lateinit var sharedPref: SharedPreferences
     private var index = 0
 
+    private var mWifiReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            if (isNetworkConnected()) {
+                loadChannels()
+            }
+        }
+    }
+
     private val mOnErrorListener: MediaPlayer.OnErrorListener =
         MediaPlayer.OnErrorListener { _, _, _ ->
-            playlists.removeAt(index)
-            playChannel()
-            video_view.start()
+            if (isNetworkConnected()) {
+                playlists.removeAt(index)
+                playChannel()
+                video_view.start()
+            }
             true
         }
 
@@ -34,11 +46,42 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        registerWifiReceiver()
+
         sharedPref = this.getPreferences(Context.MODE_PRIVATE)
         index = getIndex()
         video_view.setOnErrorListener(mOnErrorListener)
         video_view.start()
-        loadChannels()
+
+        if (isNetworkConnected()) {
+            loadChannels()
+        }
+    }
+
+    private fun isNetworkConnected(): Boolean {
+        var result = false
+        val cm = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        cm.run {
+            cm.getNetworkCapabilities(cm.activeNetwork)?.run {
+                when {
+                    hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> {
+                        result = true
+                    }
+                    hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> {
+                        result = true
+                    }
+                }
+            }
+        }
+        return result
+    }
+
+    private fun registerWifiReceiver() {
+        val filter = IntentFilter()
+        filter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION)
+        filter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION)
+        filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+        this.registerReceiver(mWifiReceiver, filter)
     }
 
     private fun loadChannels() {
