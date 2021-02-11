@@ -89,6 +89,7 @@ class MainActivity : Activity() {
             val url = URL(getString(R.string.m3u_url)).openConnection()
             val inputStream: InputStream = url.getInputStream()
             val reader = BufferedReader(InputStreamReader(inputStream, "UTF-8"))
+            playlists.clear()
             var channel = Channel()
             while (true) {
                 val line = reader.readLine() ?: break
