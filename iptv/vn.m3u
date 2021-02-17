@@ -17,16 +17,16 @@ https://livecdn.fptplay.net/hda/vtv7hd_hls.smil/chunklist_b2500000.m3u8
 https://livecdn.fptplay.net/hda/vtv8hd_hls.smil/playlist.m3u8
 #EXTINF:-1,VTV9
 https://livecdn.fptplay.net/hda/vtv9_hls.smil/playlist.m3u8
+#EXTINF:-1,ANTV
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/ANTV-SD-ABR/playlist.m3u8
 #EXTINF:-1,Quốc Phòng VN
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/QPTV-SD-ABR/playlist.m3u8
 #EXTINF:-1,Quốc Hội HD
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/QUOCHOI-SD-ABR/playlist.m3u8
 #EXTINF:-1,Nhân Dân
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/NHANDAN-SD-ABR/playlist.m3u8
-#EXTINF:-1,VOV Giao Thông
-http://wvod.cdn.fptplay.net/ovod/_definst_/mp4:mp4/fplay/720p/XoneFM/xonefm13-3.mp4/playlist.m3u8
-#EXTINF:-1,ANTV
-https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/ANTV-SD-ABR/playlist.m3u8
+#EXTINF:-1,TTXVN
+https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/TTXVN-SD-ABR/playlist.m3u8
 #EXTINF:-1,FBNC
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/FBNC-HD-1080p/playlist.m3u8
 #EXTINF:-1,VTC1
@@ -117,8 +117,6 @@ http://113.161.6.157:8081/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/TAYNINH-SD-ABR/playlist.m3u8
 #EXTINF:-1,Tiền Giang
 http://thtg.vn:8001/thtg.m3u8
-#EXTINF:-1,TTXVN
-https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/TTXVN-SD-ABR/playlist.m3u8
 #EXTINF:-1,Yên Bái
 http://yenbaitv.org.vn//hls/livestream.m3u8
 #EXTINF:-1,AXN
