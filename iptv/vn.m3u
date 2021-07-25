@@ -1,22 +1,26 @@
 #EXTM3U
 #EXTINF:-1,VTV1
-https://vips-livecdn.fptplay.net/hda1/vtv1hd_vhls.smil/playlist.m3u8
+https://vtvnews-livevtv.vtvdigital.vn/2ea53afba27d541c43b00642e97301e2/1627233379039/vtv1/vtv1@720p.m3u8
 #EXTINF:-1,VTV2
-https://livecdn.fptplay.net/hda/vtv2_hls.smil/playlist.m3u8
+https://vtvnews-livevtv.vtvdigital.vn/0f8cc52237451d14e43561c89200ff00/1627233464023/vtv2/vtv2@720p.m3u8
 #EXTINF:-1,VTV3
-https://livecdn.fptplay.net/hda/vtv3hd_hls.smil/playlist.m3u8
+https://vtvnews-livevtv.vtvdigital.vn/cdcb8e54abd15ac258f805074106fb87/1627233502991/vtv3/vtv3@720p.m3u8
 #EXTINF:-1,VTV4
-https://livecdn.fptplay.net/hda/vtv4_hls.smil/playlist.m3u8
+https://vtvnews-livevtv.vtvdigital.vn/609c8d17e7b89a2ed53a6ee0c475a920/1627233533023/vtv4/index.m3u8
 #EXTINF:-1,VTV5
-https://livecdn.fptplay.net/hda/vtv5hd_hls.smil/playlist.m3u8
+https://vtvnews-livevtv.vtvdigital.vn/b1b9b2c608ba1eee3514418a17b43ee3/1627233679892/vtv5/vtv5@720p.m3u8
+#EXTINF:-1,VTV5 TNNB
+https://vtvnews-livevtv.vtvdigital.vn/68edb73ec18de3ca773455602c858fe9/1627233840669/vtv5tnb/vtv5tnb@720p.m3u8
+#EXTINF:-1,VTV5 TN
+https://vtvnews-livevtv.vtvdigital.vn/45709c113a6c5e7f882cde897fc48588/1627233891894/vtv5tn/vtv5tn@720p.m3u8
 #EXTINF:-1,VTV6
-https://livecdn.fptplay.net/hda/vtv6hd_hls.smil/playlist.m3u8
+https://vtvnews-livevtv.vtvdigital.vn/1d776931b9d45cba63875e0307468013/1627233722488/vtv6/vtv6@720p.m3u8
 #EXTINF:-1,VTV7
-https://livecdn.fptplay.net/hda/vtv7hd_hls.smil/chunklist_b2500000.m3u8
+https://vtvnews-livevtv.vtvdigital.vn/189d32e8bd0d13724007ab19abc85c54/1627233751087/vtv7/vtv7@720p.m3u8
 #EXTINF:-1,VTV8
-https://livecdn.fptplay.net/hda/vtv8hd_hls.smil/playlist.m3u8
+https://vtvnews-livevtv.vtvdigital.vn/331e75e2d920ff5e09fa862dde6dd353/1627233775979/vtv8/vtv8@720p.m3u8
 #EXTINF:-1,VTV9
-https://livecdn.fptplay.net/hda/vtv9_hls.smil/playlist.m3u8
+https://vtvnews-livevtv.vtvdigital.vn/b7f46846d8cc3faf555447b8223ea3c4/1627233797035/vtv9/vtv9@720p.m3u8
 #EXTINF:-1,ANTV
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/ANTV-SD-ABR/playlist.m3u8
 #EXTINF:-1,Quốc Phòng VN
