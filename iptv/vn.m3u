@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1,VTV1
-https://livecdn.fptplay.net/hda/vtv1hd_hls.smil/playlist.m3u8
+https://vips-livecdn.fptplay.net/hda1/vtv1hd_vhls.smil/playlist.m3u8
 #EXTINF:-1,VTV2
 https://livecdn.fptplay.net/hda/vtv2_hls.smil/playlist.m3u8
 #EXTINF:-1,VTV3
