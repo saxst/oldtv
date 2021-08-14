@@ -1,26 +1,26 @@
 #EXTM3U
 #EXTINF:-1,VTV1
-https://vips-livecdn.fptplay.net/hda1/vtv1hd_vhls.smil/chunklist_b2500000.m3u8
+https://livecdn.fptplay.net/hda1/vtv1hd_hls.smil/chunklist_b1800000.m3u8
 #EXTINF:-1,VTV2
-https://vips-livecdn.fptplay.net/hda1/vtv2_vhls.smil/chunklist_b5000000.m3u8
+https://livecdn.fptplay.net/hda1/vtv2_2000.stream/chunklist.m3u8
 #EXTINF:-1,VTV3
-https://vips-livecdn.fptplay.net/hda1/vtv3hd_vhls.smil/chunklist_b5000000.m3u8
+https://livecdn.fptplay.net/hda1/vtv3hd_1500.stream/chunklist.m3u8
 #EXTINF:-1,VTV4
-https://vips-livecdn.fptplay.net/hda1/vtv4_vhls.smil/chunklist_b5000000.m3u8
+https://livecdn.fptplay.net/hda1/vtv4_2000.stream/chunklist.m3u8
 #EXTINF:-1,VTV5
-https://vips-livecdn.fptplay.net/hda2/vtv5hd_vhls.smil/chunklist_b5000000.m3u8
+https://livecdn.fptplay.net/hda2/vtv5hd_1500.stream/chunklist.m3u8
 #EXTINF:-1,VTV5 TN
 https://mutixx5hq1liv.akamaized.net/vtv5tn/vtv5tn@720p.m3u8
 #EXTINF:-1,VTV5 TNB
 https://mutixx5hq1liv.akamaized.net/vtv5tnb/vtv5tnb@720p.m3u8
 #EXTINF:-1,VTV6
-https://vips-livecdn.fptplay.net/hda1/vtv6hd_vhls.smil/chunklist_b5000000.m3u8
+https://livecdn.fptplay.net/hda1/vtv6hd_1500.stream/chunklist.m3u8
 #EXTINF:-1,VTV7
-https://vips-livecdn.fptplay.net/hda3/vtv7hd_vhls.smil/chunklist_b5000000.m3u8
+https://livecdn.fptplay.net/hda3/vtv7hd_1500.stream/chunklist.m3u8
 #EXTINF:-1,VTV8
-https://vips-livecdn.fptplay.net/hda2/vtv8hd_vhls.smil/chunklist_b5000000.m3u8
+https://subs-livecdn.fptplay.net/hda2/vtv8hd_1500.stream/chunklist.m3u8
 #EXTINF:-1,VTV9
-https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/VTV9-HD-1080p/playlist.m3u8
+https://livecdn.fptplay.net/hda2/vtv9_1500.stream/chunklist.m3u8
 #EXTINF:-1,ANTV
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/ANTV-SD-ABR/playlist.m3u8
 #EXTINF:-1,Quốc Phòng VN
