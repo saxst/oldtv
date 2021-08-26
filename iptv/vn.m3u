@@ -115,6 +115,12 @@ http://210.245.20.94/hls/ktv1.m3u8
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/KIENGIANG-SD-ABR/playlist.m3u8
 #EXTINF:-1,Phú yên
 http://113.161.4.48:8080/phuyen/tv.m3u8
+#EXTINF:-1,Hà Tĩnh
+https://livecdn.fptplay.net/sdc/hatinh_1000.stream/chunklist.m3u8
+#EXTINF:-1,Quảng Bình
+https://livecdn.fptplay.net/sda/quangbinh_1000.stream/chunklist.m3u8
+#EXTINF:-1,Quảng Trị
+https://livecdn.fptplay.net/sdc/quangtri_1000.stream/chunklist.m3u8
 #EXTINF:-1,Quảng Nam
 http://113.161.6.157:8081/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8
 #EXTINF:-1,Tây Ninh
