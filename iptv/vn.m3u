@@ -1,22 +1,26 @@
 #EXTM3U
 #EXTINF:-1,VTV1
-https://livecdn.fptplay.net/hda/vtv1hd_hls.smil/playlist.m3u8
+https://livecdn.fptplay.net/hda1/vtv1hd_hls.smil/chunklist_b1800000.m3u8
 #EXTINF:-1,VTV2
-https://livecdn.fptplay.net/hda/vtv2_hls.smil/playlist.m3u8
+https://livecdn.fptplay.net/hda1/vtv2_2000.stream/chunklist.m3u8
 #EXTINF:-1,VTV3
-https://livecdn.fptplay.net/hda/vtv3hd_hls.smil/playlist.m3u8
+https://livecdn.fptplay.net/hda1/vtv3hd_1500.stream/chunklist.m3u8
 #EXTINF:-1,VTV4
-https://livecdn.fptplay.net/hda/vtv4_hls.smil/playlist.m3u8
+https://livecdn.fptplay.net/hda1/vtv4_2000.stream/chunklist.m3u8
 #EXTINF:-1,VTV5
-https://livecdn.fptplay.net/hda/vtv5hd_hls.smil/playlist.m3u8
+https://livecdn.fptplay.net/hda2/vtv5hd_1500.stream/chunklist.m3u8
+#EXTINF:-1,VTV5 TN
+https://mutixx5hq1liv.akamaized.net/vtv5tn/vtv5tn@720p.m3u8
+#EXTINF:-1,VTV5 TNB
+https://mutixx5hq1liv.akamaized.net/vtv5tnb/vtv5tnb@720p.m3u8
 #EXTINF:-1,VTV6
-https://livecdn.fptplay.net/hda/vtv6hd_hls.smil/playlist.m3u8
+https://livecdn.fptplay.net/hda1/vtv6hd_1500.stream/chunklist.m3u8
 #EXTINF:-1,VTV7
-https://livecdn.fptplay.net/hda/vtv7hd_hls.smil/chunklist_b2500000.m3u8
+https://livecdn.fptplay.net/hda3/vtv7hd_1500.stream/chunklist.m3u8
 #EXTINF:-1,VTV8
-https://livecdn.fptplay.net/hda/vtv8hd_hls.smil/playlist.m3u8
+https://subs-livecdn.fptplay.net/hda2/vtv8hd_1500.stream/chunklist.m3u8
 #EXTINF:-1,VTV9
-https://livecdn.fptplay.net/hda/vtv9_hls.smil/playlist.m3u8
+https://livecdn.fptplay.net/hda2/vtv9_1500.stream/chunklist.m3u8
 #EXTINF:-1,ANTV
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/ANTV-SD-ABR/playlist.m3u8
 #EXTINF:-1,Quốc Phòng VN
@@ -60,17 +64,17 @@ https://livecdn.fptplay.net/sdc/vtc14_hls.smil/chunklist_b2800000.m3u8
 #EXTINF:-1,VTC16
 https://livecdn.fptplay.net/sdb/vtc16_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1,HTV1
-https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV1-SD-480p/playlist.m3u8
+https://livecdn.fptplay.net/sdb/htv1_hls.smil/chunklist_b1200000.m3u8
 #EXTINF:-1,HTV2
-https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV2-HD-1080p/playlist.m3u8
+https://livecdn.fptplay.net/hda1/htv2hd_hls.smil/chunklist_b1800000.m3u8
 #EXTINF:-1,HTV3
-https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTV3-SD-480p/playlist.m3u8
+https://livecdn.fptplay.net/sdb/htv3_hls.smil/chunklist_b1200000.m3u8
 #EXTINF:-1,HTV4
-https://livecdn.fptplay.net/sdb/htv4_hls.smil/chunklist_b2500000.m3u8
+https://livecdn.fptplay.net/sdb/htv4_hls.smil/chunklist_b1200000.m3u8
 #EXTINF:-1,HTV7
-https://livecdn.fptplay.net/hda/htv7hd_hls.smil/chunklist_b2500000.m3u8
+https://livecdn.fptplay.net/hda1/htv7hd_hls.smil/chunklist_b1800000.m3u8
 #EXTINF:-1,HTV9
-https://livecdn.fptplay.net/hda/htv9hd_hls.smil/chunklist_b2500000.m3u8
+https://livecdn.fptplay.net/hda1/htv9hd_hls.smil/chunklist_b1800000.m3u8
 #EXTINF:-1,HTVC Ca nhạc
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-CANHAC-HD-1080p/playlist.m3u8
 #EXTINF:-1,HTVC Co op
@@ -80,7 +84,7 @@ https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-DULICH-HD-1080p/playlist.m3u
 #EXTINF:-1,HTVC Gia Đình
 https://livecdn.fptplay.net/hda/htvcgiadinh_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1,HTVC Phim
-https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-PHIM-HD-1080p/playlist.m3u8
+https://livecdn.fptplay.net/hda2/htvcmoviehd_hls.smil/chunklist_b1200000.m3u8
 #EXTINF:-1,HTVC Phụ Nữ
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/HTVC-PHUNU-HD-1080p/playlist.m3u8
 #EXTINF:-1,HTVC Shopping
@@ -111,6 +115,12 @@ http://210.245.20.94/hls/ktv1.m3u8
 https://htv-drm-live-cdn.fptplay.net/CDN-FPT02/KIENGIANG-SD-ABR/playlist.m3u8
 #EXTINF:-1,Phú yên
 http://113.161.4.48:8080/phuyen/tv.m3u8
+#EXTINF:-1,Hà Tĩnh
+https://livecdn.fptplay.net/sdc/hatinh_1000.stream/chunklist.m3u8
+#EXTINF:-1,Quảng Bình
+https://livecdn.fptplay.net/sda/quangbinh_1000.stream/chunklist.m3u8
+#EXTINF:-1,Quảng Trị
+https://livecdn.fptplay.net/sdc/quangtri_1000.stream/chunklist.m3u8
 #EXTINF:-1,Quảng Nam
 http://113.161.6.157:8081/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8
 #EXTINF:-1,Tây Ninh
