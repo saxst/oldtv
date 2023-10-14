@@ -2,6 +2,7 @@ package org.lzdev.oldtv
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.*
 import android.media.MediaPlayer
 import android.net.ConnectivityManager
@@ -10,39 +11,52 @@ import android.net.Uri
 import android.net.wifi.WifiManager
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.ArrayAdapter
 import android.widget.VideoView
+import org.intellij.lang.annotations.Language
 
 
 class MainActivity : Activity() {
-    //    private val playlists: ArrayList<Channel> = ArrayList()
-//    private lateinit var sharedPref: SharedPreferences
-//    private var index = 0
+    private val channels: ArrayList<Channel> = ArrayList()
+    private var index = 0
     private lateinit var webView: WebView
     private var currentVideoURL = ""
     private lateinit var videoView: VideoView
+    private var isChannelLoaded = false
 
     private var mWifiReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             if (isNetworkConnected()) {
                 webView.loadUrl("https://vtvgo.vn")
-//                loadChannels()
             }
         }
     }
 
-    private val mOnErrorListener: MediaPlayer.OnErrorListener =
-        MediaPlayer.OnErrorListener { _, _, _ ->
-            if (isNetworkConnected()) {
-//                playlists.removeAt(index)
-//                playChannel()
-                videoView.start()
-            }
-            true
+    @Language("js")
+    private val jsCode = """
+        var elements = document.querySelectorAll(".list_channel>a");
+        var channels_text = "";
+
+        elements.forEach(element => {
+            channels_text += element.getAttribute("alt") + ",";
+            channels_text += element.getAttribute("href") + "|";
+        });
+
+        channels_text = channels_text.slice(0, channels_text.length - 1);
+        channels_text;
+    """.trimIndent()
+
+    private val mOnErrorListener: MediaPlayer.OnErrorListener = MediaPlayer.OnErrorListener { _, _, _ ->
+        if (isNetworkConnected()) {
+            videoView.start()
         }
+        true
+    }
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,8 +72,7 @@ class MainActivity : Activity() {
         webView.webViewClient = object : WebViewClient() {
 
             override fun shouldInterceptRequest(
-                view: WebView?,
-                request: WebResourceRequest?
+                view: WebView?, request: WebResourceRequest?
             ): WebResourceResponse? {
                 runOnUiThread {
                     if (request != null) {
@@ -76,19 +89,32 @@ class MainActivity : Activity() {
                 }
                 return super.shouldInterceptRequest(view, request)
             }
+
+            override fun onPageFinished(view: WebView?, url: String?) {
+                if (!isChannelLoaded) {
+                    view?.evaluateJavascript(jsCode) {
+                        if (it != null && it.indexOf("http") >= 0) {
+                            val text = it.replace("\"", "")
+                            channels.clear()
+                            val channelsText = text.split("|")
+                            for (line in channelsText) {
+                                Log.e(TAG, line)
+                                channels.add(Channel(line.split(",")[0], line.split(",")[1]))
+                            }
+                            isChannelLoaded = true
+                        }
+                    }
+                }
+                super.onPageFinished(view, url)
+            }
         }
         webView.loadUrl("https://vtvgo.vn")
 
         registerWifiReceiver()
 
-//        sharedPref = this.getPreferences(Context.MODE_PRIVATE)
-//        index = getIndex()
         videoView.setOnErrorListener(mOnErrorListener)
-//        video_view.start()
-//
         if (isNetworkConnected()) {
             webView.loadUrl("https://vtvgo.vn")
-//            loadChannels()
         }
     }
 
@@ -119,100 +145,60 @@ class MainActivity : Activity() {
         this.registerReceiver(mWifiReceiver, filter)
     }
 
-    /*
-        private fun loadChannels() {
-            Thread {
-                val url = URL(getString(R.string.m3u_url)).openConnection()
-                val inputStream: InputStream = url.getInputStream()
-                val reader = BufferedReader(InputStreamReader(inputStream, "UTF-8"))
-                playlists.clear()
-                var channel = Channel()
-                while (true) {
-                    val line = reader.readLine() ?: break
-                    if (line.contains("#EXTINF")) {
-                        channel = Channel()
-                        channel.name = line.split(",").toTypedArray()[1]
-                    }
-                    if (line.contains("http")) {
-                        channel.url = line
-                        playlists.add(channel)
-                    }
+    override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
+        Log.d(TAG, "onKeyUp $keyCode")
+        when (keyCode) {
+            KeyEvent.KEYCODE_DPAD_UP -> {
+                if (index < channels.size - 1) {
+                    index++
+                } else {
+                    index = 0
                 }
+                return playChannel()
+            }
 
-                inputStream.close()
-                runOnUiThread {
+            KeyEvent.KEYCODE_DPAD_DOWN -> {
+                if (index > 0) {
+                    index--
+                } else {
+                    index = channels.size - 1
+                }
+                return playChannel()
+            }
+
+            KeyEvent.KEYCODE_DPAD_CENTER -> {
+                val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+                val adapter = ArrayAdapter<String>(this, android.R.layout.select_dialog_item)
+                channels.forEach {
+                    adapter.add(it.name)
+                }
+                builder.setSingleChoiceItems(adapter, index) { dialog, which ->
+                    index = which
                     playChannel()
+                    dialog.dismiss()
                 }
-            }.start()
-        }
-
-        override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
-            Log.d(TAG, "onKeyUp $keyCode")
-            when (keyCode) {
-                KeyEvent.KEYCODE_DPAD_UP -> {
-                    if (index < playlists.size - 1) {
-                        index++
-                    } else {
-                        index = 0
-                    }
-                    return playChannel()
-                }
-                KeyEvent.KEYCODE_DPAD_DOWN -> {
-                    if (index > 0) {
-                        index--
-                    } else {
-                        index = playlists.size - 1
-                    }
-                    return playChannel()
-                }
-                KeyEvent.KEYCODE_DPAD_LEFT -> {
-                }
-                KeyEvent.KEYCODE_DPAD_RIGHT -> {
-                }
-                KeyEvent.KEYCODE_DPAD_CENTER -> {
-                    val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-                    val adapter = ArrayAdapter<String>(this, android.R.layout.select_dialog_item)
-                    playlists.forEach {
-                        adapter.add(it.name)
-                    }
-                    builder.setSingleChoiceItems(adapter, index) { dialog, which ->
-                        index = which
-                        playChannel()
-                        dialog.dismiss()
-                    }
-                    builder.show()
-                }
-                KeyEvent.KEYCODE_MENU -> {
-                    startActivityForResult(Intent(android.provider.Settings.ACTION_SETTINGS), 0)
-                }
-                KeyEvent.KEYCODE_BACK -> {
-                    loadChannels()
-                    return true
-                }
+                builder.show()
             }
-            return super.onKeyUp(keyCode, event)
-        }
 
-        private fun playChannel(): Boolean {
-            if (index >= playlists.size) {
-                index = 0
-            }
-            saveIndex(index)
-            video_view.setVideoURI(Uri.parse(playlists[index].url))
-            return true
-        }
-
-        private fun saveIndex(value: Int) {
-            with(sharedPref.edit()) {
-                putInt("id", value)
-                apply()
+            KeyEvent.KEYCODE_MENU -> {
+                startActivityForResult(Intent(android.provider.Settings.ACTION_SETTINGS), 0)
             }
         }
+        return super.onKeyUp(keyCode, event)
+    }
 
-        private fun getIndex(): Int {
-            return sharedPref.getInt("id", 0)
+    private fun playChannel(): Boolean {
+        if (index >= channels.size) {
+            index = 0
         }
-    */
+        if (channels.size == 0) {
+            webView.loadUrl("https://vtvgo.vn")
+        } else {
+            Log.e(TAG, channels[index].url)
+            webView.loadUrl(channels[index].url)
+        }
+        return true
+    }
 
     override fun onPause() {
         super.onPause()
@@ -229,8 +215,4 @@ class MainActivity : Activity() {
     }
 }
 
-/*
-class Channel {
-    lateinit var name: String
-    lateinit var url: String
-}*/
+class Channel(val name: String, val url: String)
