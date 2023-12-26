@@ -141,7 +141,7 @@ class MainActivity : Activity() {
         val filter = IntentFilter()
         filter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION)
         filter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION)
-        filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+        filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION)
         this.registerReceiver(mWifiReceiver, filter)
     }
 
